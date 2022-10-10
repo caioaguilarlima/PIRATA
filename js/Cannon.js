@@ -5,12 +5,13 @@ class Cannon {
     this.width = width;
     this.height = height;
     this.angle = angle;
-    
   }
 
   display()
   {
     push();
+    translate(this.x, this.y);
+    rotate(this.angle);
     imageMode(CENTER);
     image(cannonImg, 0, 0, this.width, this.height);
     pop();
